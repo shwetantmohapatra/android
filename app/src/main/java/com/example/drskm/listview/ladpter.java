@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -50,7 +51,9 @@ public class ladpter extends BaseAdapter {
                 adp=inflater.inflate(R.layout.list2,null,false);
         }
         else adp = convertView;
+
         ((ImageView)adp.findViewById(R.id.imageFlag)).setImageResource(countries.get(position).getImage());;
+
         ((TextView)adp.findViewById(R.id.textCountryName)).setText(countries.get(position).getName());
         return adp;
     }
